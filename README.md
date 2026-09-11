@@ -83,7 +83,7 @@ This platform serves as the **digital backbone** for the umbrella network, enabl
 
 ### 🎯 Our Mission
 
-*To strengthen and connect NPOs, NGOs and NPCs – especially in rural and under-resourced areas – by providing practical support, tools, partnerships and thematic programmes that build sustainable organisations and resilient communities.*
+*To strengthen and connect NPOs, NGOs, CO-POs and NPCs – especially in rural and under-resourced areas – by providing practical support, tools, partnerships and thematic programmes that build sustainable organisations and resilient communities.*
 
 </td>
 </tr>

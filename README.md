@@ -28,7 +28,7 @@ This website was built to:
 | **Vision** | A connected, informed and empowered South Africa where every community-based organisation has the capacity, tools and partnerships to drive sustainable social change. |
 | **Mission** | To strengthen and connect NPOs, NGOs and NPCs – especially in rural and under-resourced areas – by providing practical support, tools, partnerships and thematic programmes that build sustainable organisations and resilient communities. |
 | **Location** | Sebayeng Ga-Dikgale, Polokwane North, Limpopo, 0750 |
-| **Contact** | 076 421 1841 · Communiconnect45@gmail.com |
+| **Contact** | 076 421 1841 · Communiconnect@gmail.com |
 | **Focus Areas** | Rural, township and under-resourced communities across South Africa. Starting in Limpopo, expanding nationally. |
 
 ---

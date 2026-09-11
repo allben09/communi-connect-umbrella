@@ -53,7 +53,7 @@
 
 ## 🔍 Overview
 
-**COMMUNI-CONNECT UMBRELLA** is a non-profit umbrella organization that connects, supports, and strengthens **NPOs, NGOs, and NPCs** across South Africa – especially in **rural and under-resourced communities**.
+**COMMUNI-CONNECT UMBRELLA** is a non-profit umbrella organization that connects, supports, and strengthens **NPOs, NGOs, CO-POs and NPCs** across South Africa – especially in **rural and under-resourced communities**.
 
 This platform serves as the **digital backbone** for the umbrella network, enabling:
 

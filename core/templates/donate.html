@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}Donate – Communi-Connect Umbrella{% endblock %}
+{% block content %}
+<section class="section">
+    <div class="container">
+        <h2 class="section-title">Make a Donation</h2>
+        <p class="section-subtitle">Your generosity empowers communities across South Africa.</p>
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <form method="POST" class="card-modern">
+                    {% csrf_token %}
+                    <input type="text" name="name" class="form-control-modern" placeholder="Your Full Name" required>
+                    <input type="email" name="email" class="form-control-modern" placeholder="Your Email" required>
+                    <input type="number" name="amount" class="form-control-modern" placeholder="Amount (ZAR)" min="10" required>
+                    <textarea name="message" class="form-control-modern" placeholder="Message (optional)" rows="3"></textarea>
+                    <div class="form-check mb-3">
+                        <input type="checkbox" name="anonymous" class="form-check-input" id="anon">
+                        <label for="anon" class="form-check-label">Donate anonymously</label>
+                    </div>
+                    <button type="submit" class="btn-primary-custom w-100">Donate Now <i class="fas fa-heart ms-1"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

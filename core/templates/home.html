@@ -1,0 +1,132 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section class="hero">
+    <div class="container hero-content">
+        <div class="row">
+            <div class="col-lg-8">
+                <h1>COMMUNI-CONNECT <span>UMBRELLA</span><br>Empowering Communities Across South Africa</h1>
+                <p class="tagline">Empowering NPOs, NGOs & NPCs – Growing Together, Connected Together.<br><em>"Building stronger organisations for stronger communities."</em></p>
+                <a href="/donate/" class="hero-btn">Donate Now <i class="fas fa-heart ms-1"></i></a>
+                <a href="/members/" class="hero-btn hero-btn-outline">View Members</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="stats-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 stat-box reveal">
+                <div class="stat-number" data-target="{{ total_orgs|default:15 }}">0</div>
+                <div class="stat-label">Organizations</div>
+            </div>
+            <div class="col-md-3 stat-box reveal">
+                <div class="stat-number" data-target="9">0</div>
+                <div class="stat-label">Provinces</div>
+            </div>
+            <div class="col-md-3 stat-box reveal">
+                <div class="stat-number" data-target="4">0</div>
+                <div class="stat-label">Programme Pillars</div>
+            </div>
+            <div class="col-md-3 stat-box reveal">
+                <div class="stat-number" data-target="1000">0</div>
+                <div class="stat-label">Lives Impacted</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2 class="section-title reveal">Our Purpose</h2>
+        <p class="section-subtitle reveal">Guided by a clear vision and a mission to strengthen communities.</p>
+        <div class="row g-4">
+            <div class="col-md-6 reveal">
+                <div class="vision-card">
+                    <h3><i class="fas fa-eye me-2" style="color: var(--orange);"></i> Our Vision</h3>
+                    <p>A connected, informed and empowered South Africa where every community-based organisation has the capacity, tools and partnerships to drive sustainable social change.</p>
+                </div>
+            </div>
+            <div class="col-md-6 reveal">
+                <div class="vision-card" style="border-left-color: var(--orange);">
+                    <h3><i class="fas fa-bullseye me-2" style="color: var(--teal);"></i> Our Mission</h3>
+                    <p>To strengthen and connect NPOs, NGOs and NPCs – especially in rural and under-resourced areas – by providing practical support, tools, partnerships and thematic programmes that build sustainable organisations and resilient communities.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" style="background: #fff;">
+    <div class="container">
+        <h2 class="section-title reveal">Our Programme Pillars</h2>
+        <p class="section-subtitle reveal">Four pillars driving sustainable change across South Africa.</p>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3 reveal">
+                <div class="card-modern">
+                    <div class="card-icon"><i class="fas fa-clipboard-check"></i></div>
+                    <h3>Organisational Capacity & Compliance</h3>
+                    <p>Registration, governance, financial systems, workshops, and funder-readiness support.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 reveal">
+                <div class="card-modern" style="border-top-color: var(--teal);">
+                    <div class="card-icon" style="background: linear-gradient(135deg, var(--teal), var(--teal-light));"><i class="fas fa-shield-heart"></i></div>
+                    <h3>GBV Prevention & Positive Masculinity</h3>
+                    <p>Awareness campaigns, engaging men & boys, and supporting survivors.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 reveal">
+                <div class="card-modern" style="border-top-color: var(--navy);">
+                    <div class="card-icon" style="background: linear-gradient(135deg, var(--navy), #1a4a7a);"><i class="fas fa-seedling"></i></div>
+                    <h3>Youth, Skills & Community Agriculture</h3>
+                    <p>Skills development, mentorship, food security, and agri-entrepreneurship.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 reveal">
+                <div class="card-modern" style="border-top-color: #8e44ad;">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #8e44ad, #a569bd);"><i class="fas fa-network-wired"></i></div>
+                    <h3>Digital Networking & Partnerships</h3>
+                    <p>Networking platforms, resource hub, and funding facilitation.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% if orgs %}
+<section class="section">
+    <div class="container">
+        <h2 class="section-title reveal">Our Member Organizations</h2>
+        <p class="section-subtitle reveal">Meet some of the incredible organizations under our umbrella.</p>
+        <div class="row g-4">
+            {% for org in orgs %}
+            <div class="col-md-6 col-lg-4 reveal">
+                <div class="card-modern">
+                    <span class="badge mb-2" style="background: var(--teal);">{{ org.get_category_display }}</span>
+                    <h3>{{ org.name }}</h3>
+                    <p>{{ org.description|truncatewords:18 }}</p>
+                    <small class="text-muted"><i class="fas fa-map-marker-alt me-1"></i> {{ org.get_province_display }}</small>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="text-center mt-5">
+            <a href="/members/" class="btn-primary-custom">View All Members <i class="fas fa-arrow-right ms-1"></i></a>
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<section class="section" style="background: linear-gradient(135deg, var(--navy), var(--teal)); color: white;">
+    <div class="container text-center">
+        <h2 class="reveal" style="font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 900;">Your Donation Changes Lives</h2>
+        <p class="reveal" style="font-size: 1.15rem; max-width: 700px; margin: 1.5rem auto;">Help us empower NPOs, NGOs, and NPCs across South Africa to build stronger, more resilient communities.</p>
+        <a href="/donate/" class="hero-btn reveal">Donate Now <i class="fas fa-heart ms-1"></i></a>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Communi-Connect Umbrella{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'core/css/style.css' %}">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="brand" href="/">
+            COMMUNI<span>-</span>CONNECT
+            <small>UMBRELLA</small>
+        </a>
+        <button class="navbar-toggler text-white border-0" data-bs-toggle="collapse" data-bs-target="#navMenu">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+            <div class="ms-auto d-flex flex-column flex-lg-row align-items-lg-center">
+                <a href="/">Home</a>
+                <a href="/about/">About</a>
+                <a href="/programmes/">Programmes</a>
+                <a href="/members/">Members</a>
+                <a href="/contact/">Contact</a>
+                <a href="/donate/" class="nav-cta">Donate <i class="fas fa-heart ms-1"></i></a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+{% if messages %}
+<div class="container mt-3">
+    {% for message in messages %}
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        {{ message }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+
+{% block content %}{% endblock %}
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <h5>COMMUNI-CONNECT UMBRELLA</h5>
+                <p>Empowering NPOs, NGOs & NPCs – Growing Together, Connected Together.</p>
+                <p><em>"Building stronger organisations for stronger communities."</em></p>
+            </div>
+            <div class="col-md-4 mb-4">
+                <h5>Quick Links</h5>
+                <a href="/about/">About Us</a>
+                <a href="/programmes/">Our Programmes</a>
+                <a href="/members/">Member Organizations</a>
+                <a href="/donate/">Donate</a>
+            </div>
+            <div class="col-md-4 mb-4">
+                <h5>Contact</h5>
+                <p><i class="fas fa-map-marker-alt me-2"></i> Sebayeng Ga-Dikgale, Polokwane North, Limpopo, 0750</p>
+                <p><i class="fas fa-phone me-2"></i> 076 421 1841</p>
+                <p><i class="fas fa-envelope me-2"></i> Communiconnect45@gmail.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 COMMUNI-CONNECT UMBRELLA. All rights reserved. | Building a Better South Africa.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="{% static 'core/js/main.js' %}"></script>
+</body>
+                  </html>
